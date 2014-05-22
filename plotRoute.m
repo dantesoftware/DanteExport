@@ -16,8 +16,9 @@ end
 %activate my figure
 myFigure;
 hold on;
-for s=1:length(route)
-    el = route(s);
+segments = route.segments;
+for s=1:length(segments)
+    el = segments(s);
     [x y] = getElementGeometry(el);
     ls = '-';
     plot(gca, x, y, 'LineWidth', 5, 'Color', [0.5 0.8 0.6], 'LineStyle', ls);
